@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Petal C. Peñaloza, BSIT student and aspiring web developer and UI/UX designer.">
+    <title>Petal C. Peñaloza — Portfolio</title>
+
+    <!-- Fonts and icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+    <!-- Tailwind (CDN) + its theme settings. Keep the config file right after the CDN script. -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind-config.js"></script>
+
+    <!-- Your own styles -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="grid-blueprint text-on-surface font-body-md antialiased selection:bg-primary selection:text-white min-h-screen flex flex-col">
+    <!-- TOP TECHNICAL NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-[2px] border-slate-900 shadow-sm">
+      <div class="max-w-[1200px] mx-auto px-5 md:px-10 h-16 md:h-20 flex items-center justify-between">
+        <a class="font-headline-md font-bold tracking-tight text-slate-900 hover:text-primary transition-colors text-xl md:text-2xl flex items-center gap-3" data-path="home" href="#home">
+  <img src="images/nlogo.jpg" alt="Petal logo" class="h-10 w-10 md:h-12 md:w-12 object-contain" onerror="this.style.display='none'" />
+  <span>Petal Peñaloza</span>
+</a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="font-headline-sm font-semibold text-slate-700 hover:text-primary transition-colors text-base" data-path="about" href="#about">About</a>
+          <a class="font-headline-sm font-semibold text-slate-700 hover:text-primary transition-colors text-base" data-path="skills" href="#skills">Skills</a>
+          <a class="font-headline-sm font-semibold text-slate-700 hover:text-primary transition-colors text-base" data-path="projects" href="#projects">Projects</a>
+          <a class="font-headline-sm font-semibold text-slate-700 hover:text-primary transition-colors text-base" data-path="contact" href="#contact">Contact</a>
+        </nav>
+        <!-- Mobile Hamburger Button -->
+        <div class="flex items-center md:hidden">
+          <button aria-label="Toggle Menu" class="w-10 h-10 border-2 border-slate-900 rounded-lg bg-white neo-shadow-sm flex items-center justify-center text-slate-900 active:translate-x-0.5 active:translate-y-0.5" id="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="material-symbols-outlined text-[24px]">menu</span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu dropdown -->
+      <div class="hidden md:hidden border-t-2 border-slate-900 bg-white px-5 py-4 neo-shadow" id="mobile-menu">
+        <nav class="flex flex-col gap-3">
+          <a class="font-headline-sm font-semibold text-slate-900 py-1.5" data-path="home" href="#home">Home</a>
+          <a class="font-headline-sm font-semibold text-slate-900 py-1.5" data-path="about" href="#about">About</a>
+          <a class="font-headline-sm font-semibold text-slate-900 py-1.5" data-path="skills" href="#skills">Skills</a>
+          <a class="font-headline-sm font-semibold text-slate-900 py-1.5" data-path="projects" href="#projects">Projects</a>
+          <a class="font-headline-sm font-semibold text-slate-900 py-1.5" data-path="contact" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN WRAPPER -->
+    <main class="w-full flex-1">
+      <div class="w-full max-w-[1200px] mx-auto px-5 md:px-10 py-10 md:py-16 flex flex-col gap-24">
+        <!-- 1. HERO SECTION -->
+        <section class="relative pt-6 md:pt-12 pb-6" id="home">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <!-- Left Column Content -->
+            <div class="lg:col-span-7 flex flex-col items-start gap-5">
+              <p class="font-headline-sm font-medium text-slate-600 text-lg md:text-xl tracking-tight">Available for Opportunities / 4th Year BSIT Student</p>
+              <h1 class="font-headline-xl text-5xl md:text-6xl lg:text-[68px] font-extrabold text-slate-900 tracking-tight leading-[1.05]">Petal C. Peñaloza</h1>
+              <div class="inline-block px-3 py-1 bg-blue-50 border-[1.5px] border-slate-900 rounded font-label-sm font-bold text-xs uppercase tracking-wider text-primary neo-shadow-sm">BSIT Student | Aspiring Web Developer &amp; UI/UX Designer</div>
+              <p class="font-body-md text-slate-700 text-base md:text-lg max-w-xl leading-relaxed mt-1">I'm an IT student learning web development and how apps are planned and designed. I enjoy turning ideas into simple, working systems, and I'm looking for chances to keep learning by building.</p>
+              <!-- CTA Buttons matching reference -->
+              <div class="flex flex-wrap items-center gap-4 mt-3">
+                <a class="neo-btn-primary inline-flex items-center gap-2 px-6 py-3.5 bg-primary text-white font-headline-sm font-bold text-base md:text-lg rounded-xl border-2 border-slate-900 text-center" href="#projects">
+                  <span>See my projects</span>
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </a>
+                <a class="neo-btn-secondary inline-flex items-center gap-2 px-6 py-3.5 bg-white text-slate-900 font-headline-sm font-bold text-base md:text-lg rounded-xl border-2 border-slate-900 text-center" href="#contact">
+                  <span>Contact me</span>
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                </a>
+              </div>
+              <!-- Meta Badges -->
+              <div class="flex flex-wrap items-center gap-5 pt-4 text-slate-600 font-label-sm text-xs font-semibold">
+                <div class="flex items-center gap-1.5 bg-white px-3 py-1.5 border border-slate-300 rounded shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-[18px]">school</span>
+                  <span>Cebu Eastern College</span>
+                </div>
+                <div class="flex items-center gap-1.5 bg-white px-3 py-1.5 border border-slate-300 rounded shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+                  <span>Front-End &amp; UI Prototypes</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Column: Prominent Neo-Brutalist "IT" Hero Card -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+              <div class="w-full max-w-[420px] aspect-[4/4.8] bg-white border-[2.5px] border-slate-900 rounded-2xl neo-shadow-lg p-6 md:p-8 flex flex-col items-center justify-between relative group">
+                <!-- Corner Tag -->
+                <div class="w-full flex items-center justify-between border-b-2 border-slate-200 pb-3 font-label-xs text-xs font-bold text-slate-500 uppercase tracking-widest">
+                  <span>MY PORTFOLIO</span>
+                  <span class="flex h-2.5 w-2.5 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+                  </span>
+                </div>
+                <!-- Big Bold Technical Center Icon matching reference "IT" card -->
+                <div class="flex-1 w-full flex flex-col items-center justify-center py-2 text-center">
+                  <!-- Your photo: save it as images/profile.jpg. It replaces the "IT" text automatically. -->
+                  <img id="profile-photo" src="images/ME.jpg" alt="Photo of Petal C. Peñaloza" class="hidden w-64 h-64 md:w-72 md:h-72 object-cover object-center rounded-2xl border-2 border-slate-900 neo-shadow mb-3">
+                  <div id="profile-fallback" class="font-headline-xl text-7xl md:text-8xl font-black text-primary tracking-tighter select-none mb-3">IT</div>
+                  <div class="w-16 h-1 bg-slate-900 my-2 rounded-full"></div>
+                  <p class="font-headline-sm font-bold text-slate-900 text-lg">Web &amp; UI/UX Focus</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 2. ABOUT SECTION -->
+        <section class="pt-8" id="about">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-0.5 bg-slate-900 text-white font-label-xs font-bold rounded text-xs tracking-wider uppercase">01 / Background</span>
+          </div>
+          <h2 class="font-headline-xl text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-8">About Me</h2>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Main Narrative Card -->
+            <div class="lg:col-span-8 bg-white border-2 border-slate-900 rounded-2xl p-6 md:p-8 neo-shadow flex flex-col gap-5">
+              <div class="inline-flex self-start items-center gap-2 px-3.5 py-1.5 rounded-lg bg-blue-50 border border-slate-900 font-label-sm font-bold text-xs text-primary">
+                <span class="material-symbols-outlined text-[16px]">school</span>
+                <span>Cebu Eastern College Inc. • 4th Year BSIT</span>
+              </div>
+              <div class="flex flex-col gap-4 text-slate-700 font-body-lg text-base md:text-lg leading-relaxed">
+                <p>I am Petal C. Peñaloza, an Information Technology student at Cebu Eastern College Inc., currently in my 4th year of the BSIT program. My interest in technology comes from its ability to solve practical problems and improve how people work and live.</p>
+                <p>I am developing skills in planning, problem solving, and working with others. I value clear communication and learning from feedback, and I try to apply both in every activity.</p>
+                <p class="font-medium text-slate-900 bg-slate-50 p-4 rounded-xl border border-slate-200">My goal is to gain practical experience in web development and system design and to keep improving my technical skills. I welcome opportunities to learn, collaborate, and contribute.</p>
+              </div>
+            </div>
+            <!-- Academic & Interests Sidebar -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+              <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col gap-2">
+                <span class="font-label-xs text-xs font-bold uppercase tracking-wider text-primary">Academic Status</span>
+                <div class="font-headline-sm font-bold text-slate-900 text-lg">Bachelor of Science in Information Technology</div>
+                <p class="font-body-sm text-slate-600 text-sm leading-relaxed mt-1">Focusing on front-end development, responsive layouts, and user-centered system workflows.</p>
+              </div>
+              <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col gap-3 flex-1 justify-between">
+                <div>
+                  <span class="font-label-xs text-xs font-bold uppercase tracking-wider text-primary">Core Interests</span>
+                  <p class="font-body-sm text-slate-600 text-sm mt-1 leading-relaxed">Key domains I am actively exploring and applying in my studies:</p>
+                </div>
+                <div class="flex flex-wrap gap-2 pt-2">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 border border-slate-900 font-label-xs text-xs font-bold text-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Web Development
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 border border-slate-900 font-label-xs text-xs font-bold text-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                    UI/UX Design
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 border border-slate-900 font-label-xs text-xs font-bold text-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                    System Design
+                  </span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 border border-slate-900 font-label-xs text-xs font-bold text-slate-800">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                    Problem Solving
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3. SKILLS SECTION -->
+        <section class="pt-8" id="skills">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2.5 py-0.5 bg-slate-900 text-white font-label-xs font-bold rounded text-xs tracking-wider uppercase">02 / Capabilities</span>
+              </div>
+              <h2 class="font-headline-xl text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Skills &amp; Proficiencies</h2>
+            </div>
+            <p class="font-body-sm text-slate-600 max-w-md text-sm md:text-base">Honest self-assessed levels based on coursework, personal coding, and continuous practice. No exaggerated percentage bars.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Skill 1: HTML -->
+            <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-5 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 border-2 border-slate-900 flex items-center justify-center text-primary font-bold">
+                  <span class="material-symbols-outlined text-[26px]">code</span>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-blue-50 border border-slate-900 text-primary font-label-xs text-xs font-bold tracking-wide">Comfortable</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-xl font-bold text-slate-900 mb-1">HTML</h3>
+                <p class="font-body-sm text-slate-600 text-sm leading-relaxed">Structuring semantic content, accessible web layouts, and clean hierarchy for modern browsers.</p>
+              </div>
+            </div>
+            <!-- Skill 2: CSS -->
+            <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-5 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 border-2 border-slate-900 flex items-center justify-center text-primary font-bold">
+                  <span class="material-symbols-outlined text-[26px]">palette</span>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-blue-50 border border-slate-900 text-primary font-label-xs text-xs font-bold tracking-wide">Comfortable</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-xl font-bold text-slate-900 mb-1">CSS</h3>
+                <p class="font-body-sm text-slate-600 text-sm leading-relaxed">Responsive styling with Flexbox, Grid, utility-first patterns, and fluid mobile-first layouts.</p>
+              </div>
+            </div>
+            <!-- Skill 3: JavaScript -->
+            <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-5 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 border-2 border-slate-900 flex items-center justify-center text-amber-700 font-bold">
+                  <span class="material-symbols-outlined text-[26px]">javascript</span>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-amber-50 border border-slate-900 text-amber-800 font-label-xs text-xs font-bold tracking-wide">Learning</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-xl font-bold text-slate-900 mb-1">JavaScript</h3>
+                <p class="font-body-sm text-slate-600 text-sm leading-relaxed">DOM manipulation, asynchronous fetching, event logic, and core programming fundamentals.</p>
+              </div>
+            </div>
+            <!-- Skill 4: Databases -->
+            <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-5 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 border-2 border-slate-900 flex items-center justify-center text-amber-700 font-bold">
+                  <span class="material-symbols-outlined text-[26px]">database</span>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-amber-50 border border-slate-900 text-amber-800 font-label-xs text-xs font-bold tracking-wide">Learning</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-xl font-bold text-slate-900 mb-1">Databases</h3>
+                <p class="font-body-sm text-slate-600 text-sm leading-relaxed">Understanding relational structures, basic SQL schema creation, querying, and data persistence.</p>
+              </div>
+            </div>
+            <!-- Skill 5: UI/UX Design -->
+            <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-5 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 border-2 border-slate-900 flex items-center justify-center text-primary font-bold">
+                  <span class="material-symbols-outlined text-[26px]">design_services</span>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-blue-50 border border-slate-900 text-primary font-label-xs text-xs font-bold tracking-wide">Comfortable</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-xl font-bold text-slate-900 mb-1">UI/UX Design</h3>
+                <p class="font-body-sm text-slate-600 text-sm leading-relaxed">Wireframing, spacing systems, interface ergonomics, typography selection, and readability.</p>
+              </div>
+            </div>
+            <!-- Skill 6: Teamwork -->
+            <div class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-5 transition-transform hover:-translate-y-1">
+              <div class="flex items-start justify-between">
+                <div class="w-12 h-12 rounded-xl bg-blue-50 border-2 border-slate-900 flex items-center justify-center text-primary font-bold">
+                  <span class="material-symbols-outlined text-[26px]">groups</span>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-blue-50 border border-slate-900 text-primary font-label-xs text-xs font-bold tracking-wide">Comfortable</span>
+              </div>
+              <div>
+                <h3 class="font-headline-md text-xl font-bold text-slate-900 mb-1">Teamwork</h3>
+                <p class="font-body-sm text-slate-600 text-sm leading-relaxed">Active listening, iterative feedback integration, academic group collaboration, and reliable execution.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 4. FEATURED PROJECTS SECTION -->
+        <section class="pt-8" id="projects">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="px-2.5 py-0.5 bg-slate-900 text-white font-label-xs font-bold rounded text-xs tracking-wider uppercase">03 / Works</span>
+              </div>
+              <h2 class="font-headline-xl text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Featured Projects</h2>
+            </div>
+            <p class="font-body-sm text-slate-600 max-w-md text-sm md:text-base">Academic assignments, interface experiments, and exploratory projects. Structured with room to add future projects easily.</p>
+          </div>
+          <div class="flex flex-col gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-white border-2 border-slate-900 rounded-2xl p-5 neo-shadow flex flex-col justify-between transition-transform hover:-translate-y-1">
+                <div class="flex flex-col gap-4">
+                  <div class="w-full rounded-xl bg-slate-50 border-2 border-slate-900 p-2.5 flex flex-col gap-2">
+                    <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+                      <div class="flex items-center gap-1">
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                      </div>
+                      <span class="font-label-xs text-[11px] text-slate-600 font-mono truncate">practice-mockup.canvas</span>
+                      <span class="material-symbols-outlined text-slate-500 text-[16px]">devices</span>
+                    </div>
+                    <div data-shot-placeholder class="w-full h-32 rounded-lg bg-white border border-dashed border-slate-300 flex flex-col items-center justify-center p-3 text-center">
+                      <div class="w-8 h-8 rounded-lg bg-blue-50 border border-slate-900 flex items-center justify-center text-primary mb-1.5">
+                        <span class="material-symbols-outlined text-[18px]">web</span>
+                      </div>
+                      <span class="font-headline-sm text-xs font-bold text-slate-900">Project Screenshot Mockup</span>
+                      <span class="font-label-xs text-[10px] text-slate-500 font-mono mt-0.5">(images/ui-ux-practice.jpg)</span>
+                    </div>
+                    <img data-shot src="images/PRACTICE.jpg" alt="Screenshot of project" class="hidden w-full h-32 object-cover rounded-lg border-2 border-slate-900">
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                      <span class="px-2.5 py-0.5 rounded-full bg-blue-50 border border-slate-900 text-primary font-label-xs text-[11px] font-bold uppercase tracking-wider">Case Study / Design</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl font-extrabold text-slate-900 tracking-tight">UI/UX Design Practice</h3>
+                  </div>
+                  <div class="flex flex-col gap-2.5 text-xs text-slate-700 leading-relaxed">
+                    <div>
+                      <span class="font-label-xs text-[11px] uppercase font-mono text-primary block font-bold mb-0.5">Overview</span>
+                      <p>Practice project exploring UI/UX design: creating clear, readable, intuitive screen layouts with fluid user hierarchies.</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg">
+                      <span class="font-label-xs text-[11px] uppercase font-mono text-slate-900 block font-bold mb-0.5">My Contribution</span>
+                      <p class="text-slate-600">Planned layouts, selected typography &amp; color tokens, and iteratively revised based on feedback.</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Wireframing</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Typography</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Layout Flow</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Design Feedback</span>
+                  </div>
+                </div>
+                <div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between gap-2">
+                  <a class="neo-btn-secondary inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border-2 border-slate-900 font-headline-sm font-bold text-xs text-slate-900" href="#" data-alert="This project documentation is currently being finalized. Check back soon!">
+                    <span>View Project</span>
+                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  </a>
+                  <span class="font-label-xs text-[11px] text-slate-500 font-mono">Coming Soon</span>
+                </div>
+              </div>
+              <div class="bg-white border-2 border-slate-900 rounded-2xl p-5 neo-shadow flex flex-col justify-between transition-transform hover:-translate-y-1">
+                <div class="flex flex-col gap-4">
+                  <div class="w-full rounded-xl bg-slate-50 border-2 border-slate-900 p-2.5 flex flex-col gap-2">
+                    <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+                      <div class="flex items-center gap-1">
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                      </div>
+                      <span class="font-label-xs text-[11px] text-slate-600 font-mono truncate">sigaruta-app.preview</span>
+                      <span class="material-symbols-outlined text-slate-500 text-[16px]">smartphone</span>
+                    </div>
+                    <div data-shot-placeholder class="w-full h-32 rounded-lg bg-white border border-dashed border-slate-300 flex flex-col items-center justify-center p-3 text-center">
+                      <div class="w-8 h-8 rounded-lg bg-blue-50 border border-slate-900 flex items-center justify-center text-primary mb-1.5">
+                        <span class="material-symbols-outlined text-[18px]">visibility</span>
+                      </div>
+                      <span class="font-headline-sm text-xs font-bold text-slate-900">SigaRuta App &amp; Web GIS</span>
+                      <span class="font-label-xs text-[10px] text-slate-500 font-mono mt-0.5">(images/sigaruta.jpg)</span>
+                    </div>
+                    <img data-shot src="images/SIGARUTA.jpg" alt="Screenshot of project" class="hidden w-full h-32 object-cover rounded-lg border-2 border-slate-900">
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                      <span class="px-2.5 py-0.5 rounded-full bg-blue-50 border border-slate-900 text-primary font-label-xs text-[11px] font-bold uppercase tracking-wider">Capstone</span>
+                      <span class="px-2.5 py-0.5 rounded-full bg-indigo-50 border border-slate-900 text-indigo-700 font-label-xs text-[11px] font-bold uppercase tracking-wider">AI / Vision</span>
+                      <span class="px-2 py-0.5 rounded-full bg-slate-100 border border-slate-900 text-slate-700 font-label-xs text-[11px] font-bold uppercase tracking-wider">SDG 11</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl font-extrabold text-slate-900 tracking-tight">SigaRuta</h3>
+                    <p class="font-label-xs text-[11px] text-primary font-mono font-bold mt-0.5 truncate">Streetlight Failure Detection &amp; Tracking</p>
+                  </div>
+                  <div class="flex flex-col gap-2.5 text-xs text-slate-700 leading-relaxed">
+                    <div>
+                      <span class="font-label-xs text-[11px] uppercase font-mono text-primary block font-bold mb-0.5">Overview</span>
+                      <p>AI app &amp; dashboard for Tisa, Cebu City using YOLOv8-Nano to detect streetlight failures, log GPS geotags, and support LGU verification.</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg">
+                      <span class="font-label-xs text-[11px] uppercase font-mono text-slate-900 block font-bold mb-0.5">Contribution (Peñaloza, P.)</span>
+                      <p class="text-slate-600">Report Verification &amp; Management Module Owner — QA, report review, flagging invalid entries, status updates.</p>
+                    </div>
+                    <div class="text-[11px] font-mono text-slate-500 truncate">
+                      <span class="font-bold text-slate-800">Co-Authors:</span>
+                      J. Compuesto, J. Ancajas, R. Baar, C. Baclay, P. Peñaloza
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">YOLOv8</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">FastAPI</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Kotlin</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">ReactJS</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">MySQL</span>
+                  </div>
+                </div>
+                <div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between gap-2">
+                  <a class="neo-btn-secondary inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border-2 border-slate-900 font-headline-sm font-bold text-xs text-slate-900" href="#" data-alert="Capstone research paper and repository links will be available upon publication.">
+                    <span>Case Study</span>
+                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  </a>
+                  <span class="font-label-xs text-[11px] text-slate-500 font-mono">AY 2026–2027</span>
+                </div>
+              </div>
+              <div class="bg-white border-2 border-slate-900 rounded-2xl p-5 neo-shadow flex flex-col justify-between transition-transform hover:-translate-y-1">
+                <div class="flex flex-col gap-4">
+                  <div class="w-full rounded-xl bg-slate-50 border-2 border-slate-900 p-2.5 flex flex-col gap-2">
+                    <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+                      <div class="flex items-center gap-1">
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400"></span>
+                      </div>
+                      <span class="font-label-xs text-[11px] text-slate-600 font-mono truncate">darkwood-escape.gameplay</span>
+                      <span class="material-symbols-outlined text-slate-500 text-[16px]">sports_esports</span>
+                    </div>
+                    <div data-shot-placeholder class="w-full h-32 rounded-lg bg-white border border-dashed border-slate-300 flex flex-col items-center justify-center p-3 text-center">
+                      <div class="w-8 h-8 rounded-lg bg-blue-50 border border-slate-900 flex items-center justify-center text-primary mb-1.5">
+                        <span class="material-symbols-outlined text-[18px]">stadia_controller</span>
+                      </div>
+                      <span class="font-headline-sm text-xs font-bold text-slate-900">Darkwood Gameplay Preview</span>
+                      <span class="font-label-xs text-[10px] text-slate-500 font-mono mt-0.5">(images/darkwood.jpg)</span>
+                    </div>
+                    <img data-shot src="images/DARKWOOD.png" alt="Screenshot of project" class="hidden w-full h-32 object-cover rounded-lg border-2 border-slate-900">
+                  </div>
+                  <div>
+                    <div class="flex flex-wrap items-center gap-1.5 mb-2">
+                      <span class="px-2.5 py-0.5 rounded-full bg-blue-50 border border-slate-900 text-primary font-label-xs text-[11px] font-bold uppercase tracking-wider">Game Dev</span>
+                      <span class="px-2.5 py-0.5 rounded-full bg-purple-50 border border-slate-900 text-purple-700 font-label-xs text-[11px] font-bold uppercase tracking-wider">Multiplayer Co-Op</span>
+                    </div>
+                    <h3 class="font-headline-md text-xl font-extrabold text-slate-900 tracking-tight">Darkwood Escape</h3>
+                    <p class="font-label-xs text-[11px] text-primary font-mono font-bold mt-0.5 truncate">Roblox Horror Survival Game</p>
+                  </div>
+                  <div class="flex flex-col gap-2.5 text-xs text-slate-700 leading-relaxed">
+                    <div>
+                      <span class="font-label-xs text-[11px] uppercase font-mono text-primary block font-bold mb-0.5">Overview</span>
+                      <p>2-6 player co-op survival horror game in Roblox Studio (Lua). Players solve puzzles, gather items, and evade AI patrol enemies to escape.</p>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 p-2.5 rounded-lg">
+                      <span class="font-label-xs text-[11px] uppercase font-mono text-slate-900 block font-bold mb-0.5">Contribution (Peñaloza, P.)</span>
+                      <p class="text-slate-600">QA Tester &amp; Documentation — gameplay testing, bug logging, inventory &amp; AI validation, and technical reports.</p>
+                    </div>
+                    <div class="text-[11px] font-mono text-slate-500 truncate">
+                      <span class="font-bold text-slate-800">Team:</span>
+                      P. Peñaloza, K. Pahilanco, J. Compuesto, C. Baclay, R. Baar
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-1.5 pt-1">
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Roblox Studio</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Lua</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">Networking</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">AI Patrol</span>
+                    <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-800 text-slate-800 font-label-xs text-[11px] font-semibold">QA &amp; Docs</span>
+                  </div>
+                </div>
+                <div class="pt-4 mt-4 border-t border-slate-200 flex items-center justify-between gap-2">
+                  <a class="neo-btn-secondary inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white border-2 border-slate-900 font-headline-sm font-bold text-xs text-slate-900" href="#" data-alert="Darkwood Escape project details and build showcase coming soon.">
+                    <span>Game Details</span>
+                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  </a>
+                  <span class="font-label-xs text-[11px] text-slate-500 font-mono">Course Submission</span>
+                </div>
+              </div>
+            </div>
+            <div class="w-full rounded-xl bg-white border-2 border-slate-900 p-4 md:p-5 neo-shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 border-2 border-slate-900 flex items-center justify-center text-primary shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">construction</span>
+                </div>
+                <div>
+                  <div class="font-headline-sm text-sm md:text-base font-bold text-slate-900">+ More projects coming soon as coursework and practice expand</div>
+                  <p class="font-body-sm text-xs text-slate-600 mt-0.5">Currently preparing web development repositories and capstone prototypes for display.</p>
+                </div>
+              </div>
+              <div class="font-label-xs text-xs font-mono font-bold text-slate-900 px-3 py-1 rounded-md bg-slate-100 border border-slate-900 whitespace-nowrap">Semester 2026–2027</div>
+            </div>
+          </div>
+        </section>
+                        <!-- 5. CONTACT SECTION -->
+        <section class="pt-8" id="contact">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 bg-slate-900 text-white font-label-xs font-bold rounded text-xs tracking-wider uppercase">04 / Connect</span>
+          </div>
+          <h2 class="font-headline-xl text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">Get In Touch</h2>
+          <p class="font-body-lg text-slate-600 max-w-xl text-base md:text-lg mb-8">I am eager to hear feedback, explore internship opportunities, or discuss collaborations in web development and UI/UX design.</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1: Email -->
+            <a href="https://mail.google.com/mail/u/0/?fs=1&amp;to=petalpenaloza@gmail.com&amp;tf=cm" target="_blank" rel="noopener" class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-transform">              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-slate-50 border-2 border-slate-900 text-slate-800 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">mail</span>
+                </div>
+                <span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors text-[22px]">north_east</span>
+              </div>
+              <div>
+                <span class="font-label-xs text-xs font-mono text-slate-700 uppercase tracking-wider block mb-1 font-bold">Direct Mail</span>
+                <div class="font-headline-sm text-lg font-bold text-slate-900 group-hover:text-primary transition-colors break-all">petalpenaloza</div>
+                <p class="font-body-sm text-xs text-slate-500 mt-2">petalpenaloza@gmail.com</p>
+              </div>
+            </a>
+            <!-- Card 2: GitHub -->
+            <a href="https://github.com/petalssss" target="_blank" rel="noopener" class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-transform">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-slate-50 border-2 border-slate-900 text-slate-800 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">terminal</span>
+                </div>
+              </div>
+              <div>
+                <span class="font-label-xs text-xs font-mono text-slate-700 uppercase tracking-wider block mb-1 font-bold">Code Repository</span>
+                <div class="font-headline-sm text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">petalssss</div>
+                <p class="font-body-sm text-xs text-slate-500 mt-2 font-mono">https://github.com/petalssss</p>
+              </div>
+            </a>
+            <!-- Card 3: Facebook -->
+            <a href="https://web.facebook.com/petal.penaloza" target="_blank" rel="noopener" class="bg-white border-2 border-slate-900 rounded-2xl p-6 neo-shadow flex flex-col justify-between gap-6 group hover:-translate-y-1 transition-transform">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-xl bg-slate-50 border-2 border-slate-900 text-slate-800 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[26px]">work</span>
+                </div>
+              </div>
+              <div>
+                <span class="font-label-xs text-xs font-mono text-slate-700 uppercase tracking-wider block mb-1 font-bold">Facebook Account</span>
+                <div class="font-headline-sm text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">Petal Catalan Penaloza</div>
+                <p class="font-body-sm text-xs text-slate-500 mt-2 font-mono">https://web.facebook.com/petal.penaloza</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-white border-t-2 border-slate-900 py-10 mt-12">
+      <div class="max-w-[1200px] mx-auto px-5 md:px-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col items-center md:items-start gap-1">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+            <span class="font-headline-sm text-lg font-bold text-slate-900">Petal C. Peñaloza</span>
+          </div>
+          <p class="font-body-sm text-xs text-slate-600">Creative Developer &amp; UI/UX Architect</p>
+        </div>
+        <div class="flex items-center gap-6">
+          <a class="font-label-sm text-xs font-bold text-slate-700 hover:text-primary transition-colors" href="https://mail.google.com/mail/u/0/?fs=1&amp;to=petalpenaloza@gmail.com&amp;tf=cm">Email</a>
+          <a class="font-label-sm text-xs font-bold text-slate-700 hover:text-primary transition-colors" href="https://github.com/petalssss">GitHub</a>
+          <a class="font-label-sm text-xs font-bold text-slate-700 hover:text-primary transition-colors" href="https://web.facebook.com/petal.penaloza">Facebook</a>
+        </div>
+        <div class="font-label-sm text-xs text-slate-500 text-center md:text-right">© 2026 Petal C. Peñaloza. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <!-- Your own JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
